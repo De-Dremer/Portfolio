@@ -1,0 +1,56 @@
+.email{
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+.email-id{
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    opacity: 0.8;
+    
+}
+.social-media{
+    font-size: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    position: relative; 
+}
+.linkedin{
+    font-size:30px ;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    opacity: 0.8;
+}
+.insta{
+    font-size:30px ;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    opacity: 0.8;
+}
+.contact-details{
+    margin-top: 100px;
+    
+}
+.linkedin:hover,
+.insta:hover{
+    
+    color: #000235;
+    background-color: #8D8DDA;
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    max-height: fit-content;
+}
+    
+    

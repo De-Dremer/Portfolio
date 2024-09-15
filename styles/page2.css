@@ -1,0 +1,158 @@
+/* General Body Styles */
+body {
+    background-color: #000235;
+    margin: 0;
+    padding: 0;
+    height: auto; /* Allow height to adjust based on content */
+    overflow: auto; /* Enable scrolling */
+}
+
+/* Page Container */
+.page2-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; /* Ensure it is at least the height of the viewport */
+    position: relative;
+    z-index: 2; /* Ensure content is on top of background columns */
+}
+
+/* Background Columns Container */
+.col-cont-page2 {
+    display: flex;
+    justify-content: center; /* Center the columns horizontally */
+    align-items: stretch; /* Ensure columns stretch to the full height of the content */
+    width: calc(40px * 18 + 5px * 17); /* 18 columns worth of width (12 visible + 3 invisible on each side) */
+    position: absolute;
+    left: 50%; /* Center the container horizontally */
+    transform: translateX(-50%); /* Adjust for center alignment */
+    top: 0; /* Start from the top of the page */
+    bottom: 0; /* Extend to the bottom of the page */
+    z-index: 0; /* Background layer */
+    pointer-events: none; /* Prevent background from interfering with other content */
+}
+
+/* Individual Background Columns */
+.bg-col2 {
+    width: 40px; /* Width of each column */
+    background-color: #8D8DDA;
+    opacity: 0.3;
+    margin: 0 5px; /* Small margin between each column */
+    height: 100%; /* Extend to the full height of the container */
+    position: relative; /* Relative positioning for alignment within container */
+}
+
+/* Invisible Columns on Sides */
+.bg-col2.invisible {
+    background-color: transparent; /* Make the invisible strips */
+    opacity: 1;
+}
+
+/* Flexbox Layout for Content */
+.page2-flex2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 30px; /* Margin to push content down */
+    width: 100%; /* Full width */
+    max-width: calc(40px * 12 + 5px * 11); /* Limit width to fit within the columns */
+}
+
+.page2-flex1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 5px; /* Space between text container and image */
+    max-width: 100%; /* Ensure content does not exceed column width */
+}
+
+/* Heading and Paragraph Styles */
+.heading, .paragraph-style {
+    color: white;
+}
+
+.heading {
+    font-size: 20px;
+    margin-bottom: 0px; /* Space between heading and paragraph */
+    opacity: 1;
+    position: relative;
+    
+}
+
+.paragraph-style {
+    max-width: 300px; /* Adjust width to fit within visible columns */
+    font-size: 18px;
+    position: relative;
+}
+
+/* Image Styling */
+.my-image {
+    position: relative;
+    z-index: 3; /* Keep image on top */
+}
+
+.my-image-style {
+    width: 250px; /* Adjust width to fit within the columns */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+}
+
+/* Navigation Bar Styles */
+.header-page2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.LS-page2 {
+    display: flex;
+    align-items: center;
+}
+
+.AB-logo {
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    margin-right: 14em;
+    margin-left: 1px;
+    text-decoration: none;
+}
+
+.Home-button {
+    color: white;
+    font-size: 1.5em;
+    padding: 10px 15px;
+    transition: background-color 0.4s, color 0.4s, border-radius 0.4s;
+    text-decoration: none;
+}
+
+.Home-button:hover {
+    color: #000235;
+    background-color: #8D8DDA;
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    position: relative;
+}
+
+/* Heading2 Styles */
+.heading2 {
+    font-size: 20px;
+    color: white;
+    margin-top: 50px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.heading2:hover {
+    text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    position: relative;
+}
+.AB-logo:hover{
+    cursor: pointer;
+    position: relative
+}
