@@ -22,7 +22,7 @@
 .About, .My-Projects, .contact {
     color: white;
     font-size: 2vw; /* Resizes based on viewport width */
-    transition: background-color 0.4s, color 0.4s, border-radius 0.4s;
+    transition: background-color 0.3s, color 0.3s, border-radius 0.5s;
     cursor: pointer;
     padding: 1.5vw; /* Responsive padding */
     margin-right: 2vw; /* Responsive spacing */
@@ -33,9 +33,10 @@
 /* Individual positioning */
 .About {
     left: 0vw;
+   
 }
 .My-Projects {
-    left: 15vw;
+    left: 15.5vw;
 }
 .contact {
     left: 7vw;
@@ -45,8 +46,21 @@
 .About:hover, .contact:hover, .My-Projects:hover {
     color: #000235;
     background-color: #8D8DDA;
-    border-radius: 25px;
+    border-radius: 30px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.contact:hover,.My-Projects:hover{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.About:hover{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
 }
 
 /* Column container */
@@ -104,3 +118,6 @@
     opacity: 0.6;
     z-index: 1; /* Ensure the heading stays above the columns */
 }
+
+
+
