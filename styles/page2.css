@@ -43,12 +43,6 @@ body {
     position: relative; /* Relative positioning for alignment within container */
 }
 
-/* Invisible Columns on Sides */
-.bg-col2.invisible {
-    background-color: transparent; /* Make the invisible strips */
-    opacity: 1;
-}
-
 /* Flexbox Layout for Content */
 .page2-flex2 {
     display: flex;
@@ -77,7 +71,6 @@ body {
     margin-bottom: 0px; /* Space between heading and paragraph */
     opacity: 1;
     position: relative;
-    
 }
 
 .paragraph-style {
@@ -86,16 +79,57 @@ body {
     position: relative;
 }
 
-/* Image Styling */
+/* Styling for Circular Images */
 .my-image {
     position: relative;
-    z-index: 3; /* Keep image on top */
+    z-index: 3; /* Ensure image stays on top */
 }
 
-.my-image-style {
-    width: 250px; /* Adjust width to fit within the columns */
-    height: auto; /* Maintain aspect ratio */
+.my-image::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    width: 260px;
+    height: 260px;
+    border: 5px solid rgba(151, 38, 232, 0.619); /* Purple with opacity */
     border-radius: 50%;
+    clip-path: polygon(0 0, 10% 0, 10% 100%, 0 100%); /* Half arc */
+    animation: rotatePartialBorder 1.5s linear infinite;
+    z-index: -1; /* Behind the image */
+}
+
+/* Keyframes for partial border rotation */
+@keyframes rotatePartialBorder {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Image Styling */
+.my-image-style {
+    width: 250px; /* Image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular shape */
+    margin-top: 5px;
+    margin-left: 0.49px;
+}
+
+/* Center-aligned image */
+.my-image-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Left-aligned text box */
+.left-aligned {
+    text-align: left; /* Align text to the left */
+    max-width: 600px; /* Limit width if needed */
+    margin: 20px auto; /* Center the text box */
 }
 
 /* Navigation Bar Styles */
@@ -138,21 +172,151 @@ body {
     position: relative;
 }
 
-/* Heading2 Styles */
-.heading2 {
+/* Additional Headings */
+.heading2, .heading3, .heading4 {
     font-size: 20px;
+    margin-bottom: 0px;
     color: white;
-    margin-top: 50px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    opacity: 0.9;
+}
+
+.heading2 {
     max-width: 500px;
+}
+
+.heading3, .heading4 {
+    margin-top: 20px;
+}
+
+.pl {
+    font-size: 30px;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    opacity: 1;
+    margin-bottom: 0px;
+}
+
+.python, .cpp {
+    font-size: 30px;
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    opacity: 0.9;
+    margin-bottom: 0px;
+}
+
+.cpp {
+    margin-right: 90px;
+}
+
+/* Left-aligned image */
+.my-image-style-left {
+    position: relative;
+    z-index: 3; /* Ensure image stays on top */
+    margin-top: 5px;
+    width: 250px;
+    height: 250px;
+}
+
+/* Left-aligned paragraph */
+.paragraph-style-left-aligned {
+    margin-left: 50px;
+    max-width: 550px;
+    color: white;
+}
+
+/* Logo Section */
+.pll {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 5px;
+    flex-wrap: wrap; /* To ensure logos adjust and wrap on smaller screens */
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px; /* Space between logos */
     text-align: center;
 }
 
-.heading2:hover {
-    text-shadow: 0px 10px 4px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+/* Uniform Styles for All Logos */
+.python-img, .cpp-img,.c-img, .js-img, .html-img, .css-img {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
     position: relative;
+    z-index: 3;
+    opacity: 0.9;
+    margin-left: 10px;
 }
-.AB-logo:hover{
-    cursor: pointer;
-    position: relative
+
+.logo-text {
+    font-size: 22px;
+    color: white;
+    margin-top: 2px; /* Space between the logo and text */
+    text-align: center;
+    background: linear-gradient(90deg, #ffffff, #33ff00);
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text fill transparent */
+    background-clip: text; /* For non-WebKit browsers */
 }
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    .python-img, .cpp-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .logo-text {
+        font-size: 25px;
+    }
+}
+
+/* Image Hover Effect */
+.my-image-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+.my-image-center img {
+    border-radius: 50%; /* Circular shape */
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+    transition: box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out; /* Smooth transitions */
+    width: 250px;
+    height: 250px;
+}
+
+.my-image-center:hover img {
+    box-shadow: 0px 0px 20px rgba(151, 38, 232, 1); /* Glowing effect */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+
+
+/* _________________ */
+
+
+
+
+
+
+
+
+
