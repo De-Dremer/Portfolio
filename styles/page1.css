@@ -119,5 +119,39 @@
     z-index: 1; /* Ensure the heading stays above the columns */
 }
 
+@media (max-width: 600px) {
+    .col-cont {
+        flex-direction: row; /* Keep columns in a row */
+        flex-wrap: nowrap; /* No wrapping */
+        justify-content: space-between; /* Evenly space columns */
+        width: 100%; /* Full width */
+        height: auto; /* Height adjusts automatically */
+    }
+    .AB-logo{
+
+        margin-left: 20px;
+    }
+    .bg-col {
+        width: calc(100% / 3 - 1vw); /* Divide width by 3 and account for gaps */
+        height: 100vh; /* Full viewport height */
+        background-color: rgba(141, 141, 218, 0.3); /* Retain semi-transparent background */
+    }
+    .About{
+        margin-left: 12px;
+    }
+    .contact{
+        margin-left: 10px;
+        padding-left: 10px;
+        left: 10vw;
+        
+    }
+    .My-Projects{
+        
+        margin-left: 10px;
+        
+        left: 22vw;
+        
+    }
 
 
+}
