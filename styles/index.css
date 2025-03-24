@@ -1,0 +1,141 @@
+body {
+    background-color: #000235;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Outfit', sans-serif;
+}
+
+.AB-logo {
+    color: white;
+    font-weight: bold;
+    font-size: 3vw;
+    position: absolute;
+    top: 2vw;
+    margin-left: 2vw;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.desktop-nav a {
+    color: white;
+    font-size: 2vw;
+    transition: background-color 0.3s, color 0.3s, border-radius 0.5s;
+    cursor: pointer;
+    padding: 1vw; /* ↓ reduced padding */
+    margin-right: 0.5vw; /* ↓ reduced margin */
+    text-decoration: none;
+    position: relative;
+}
+
+
+.desktop-nav a:hover {
+    color: #000235;
+    background-color: #8D8DDA;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.col-cont {
+    background-color: #000235;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.bg-col {
+    width: 5vw;
+    height: 100vh;
+    background-color: rgba(141, 141, 218, 0.3);
+    margin: 0 0.5vw;
+    position: relative;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    padding: 1vw 0vw;
+    display: flex;
+    justify-content: flex-end; /* Change this ↓ */
+    align-items: center;
+    z-index: 5;
+    top: 1.5vw;
+    right: 14vw;
+}
+
+
+.mid-heading {
+    position: absolute;
+    font-size: 10vw;
+    color: white;
+    font-weight: lighter;
+    font-style: italic;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+    z-index: 1;
+}
+
+/* Hamburger styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+.hamburger {
+    position: absolute;
+    top: 2vw;
+    right: 1vw;
+}
+
+.hamburger div {
+    background: white;
+    height: 3px;
+    border-radius: 2px;
+}
+
+/* Mobile nav styles */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 35, 0.95);
+    position: absolute;
+    top: 8vw;
+    right: 1vw;
+    padding: 2vw;
+    border-radius: 10px;
+    gap: 5px;
+    z-index: 9;
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 3.5vw;
+    padding: 1vw 0;
+}
+
+.mobile-nav a:hover {
+    color: #000235;
+    background-color: #8D8DDA;
+    border-radius: 10px;
+    padding: 1vw;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .desktop-nav {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
