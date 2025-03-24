@@ -5,6 +5,7 @@ body {
     padding: 0;
     height: auto; /* Allow height to adjust based on content */
     overflow: auto; /* Enable scrolling */
+    
 }
 
 /* Page Container */
@@ -99,6 +100,16 @@ body {
     clip-path: polygon(0 0, 10% 0, 10% 100%, 0 100%); /* Half arc */
     animation: rotatePartialBorder 1.5s linear infinite;
     z-index: -1; /* Behind the image */
+}
+.star {
+    display: inline-block;
+    animation: colorChange 2s ease-in-out infinite;
+}
+
+@keyframes colorChange {
+    0% { color: aqua; }
+    50% { color: #FF4500; }  /* OrangeRed */
+    100% { color: aqua; }
 }
 
 /* Keyframes for partial border rotation */
@@ -406,7 +417,6 @@ body {
     }
     
 }
-
 
 
 
